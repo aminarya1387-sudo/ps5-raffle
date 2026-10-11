@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+:root {
+  --font-vazir: 'Vazirmatn', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --bg-main: #0c1017;
+  --bg-card: #131926;
+  --bg-card-hover: #172030;
+  --border-subtle: #1e293b;
+  --ps-blue: #0070d1;
+  --ps-blue-dark: #00439c;
+  --ps-blue-light: #0082ff;
+  --gold-accent: #f59e0b;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: var(--font-vazir);
+}
+
+body {
+  background-color: var(--bg-main);
+  color: #f1f5f9;
+  direction: rtl;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #090d14;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Clean, crisp surface styles (human e-commerce standards) */
+.store-card {
+  background-color: #121824;
+  border: 1px solid #1e293b;
+  border-radius: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.store-card:hover {
+  border-color: #334155;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.4);
+}
+
+.store-card-featured {
+  background: linear-gradient(180deg, #162032 0%, #121824 100%);
+  border: 1px solid #25334d;
+  box-shadow: 0 8px 30px -4px rgba(0, 0, 0, 0.5);
+}
+
+/* PlayStation brand button */
+.btn-playstation {
+  background: linear-gradient(135deg, #0070d1 0%, #00439c 100%);
+  color: #ffffff;
+  font-weight: 700;
+  border-radius: 0.75rem;
+  transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 14px 0 rgba(0, 112, 209, 0.35);
+}
+
+.btn-playstation:hover {
+  background: linear-gradient(135deg, #0082ff 0%, #0056b8 100%);
+  box-shadow: 0 6px 20px 0 rgba(0, 112, 209, 0.5);
+  transform: translateY(-1px);
+}
+
+.btn-playstation:active {
+  transform: translateY(0);
+}
+
+/* Subtle Shimmer for progress bar */
+@keyframes softShimmer {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.animate-soft-shimmer {
+  animation: softShimmer 3s infinite linear;
+}
+
+/* Authentic Persian Raffle Ticket Style (Human Craftsmanship) */
+.ticket-stub {
+  position: relative;
+  background: #121927;
+  border: 1px solid #222f46;
+  border-radius: 1rem;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ticket-stub:hover {
+  border-color: #0070d1;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px -4px rgba(0, 112, 209, 0.25);
+}
+
+.ticket-stub-selected {
+  background: #152238;
+  border: 2px solid #0070d1;
+  box-shadow: 0 10px 30px -4px rgba(0, 112, 209, 0.35);
+}
+
+.ticket-notch-top {
+  position: absolute;
+  top: -9px;
+  right: -9px;
+  width: 18px;
+  height: 18px;
+  background-color: #0a0e16;
+  border-radius: 9999px;
+  border: 1px solid #222f46;
+}
+
+.ticket-notch-bottom {
+  position: absolute;
+  bottom: -9px;
+  right: -9px;
+  width: 18px;
+  height: 18px;
+  background-color: #0a0e16;
+  border-radius: 9999px;
+  border: 1px solid #222f46;
+}
+
+/* Simulated Security Barcode */
+.barcode-line {
+  background-color: #64748b;
+  height: 100%;
+  display: inline-block;
+}
+
+/* Official Circular Stamp */
+.official-stamp {
+  border: 2px dashed #38bdf8;
+  border-radius: 9999px;
+  color: #38bdf8;
+  transform: rotate(-8deg);
+  opacity: 0.85;
+}
+
